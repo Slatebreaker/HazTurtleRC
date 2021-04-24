@@ -1,0 +1,5 @@
+function keyInterrupt(stopKey)
+    print("Press " .. stopKey .. " to stop")
+    repeat local _, key = os.pullEvent("key")
+    until key == stopKey
+end
