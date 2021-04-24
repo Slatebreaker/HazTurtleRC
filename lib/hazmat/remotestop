@@ -1,0 +1,5 @@
+rednet.open("left")
+function remoteStop()
+    repeat n, msg, p = rednet.receive(os.computerLabel())
+    until msg == "stop"
+end
