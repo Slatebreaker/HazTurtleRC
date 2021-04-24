@@ -1,0 +1,28 @@
+function dig()
+    while true do
+        turtle.placeDown()
+        turtle.digUp()
+        turtle.dig()
+        turtle.forward()
+    end
+end
+ 
+ 
+function digSafeTunnel()
+    while true do 
+        turtle.dig()
+        turtle.turnRight()
+        turtle.place()
+        turtle.up()
+        turtle.place()
+        turtle.turnLeft()
+        turtle.placeUp()
+        turtle.dig()
+        turtle.turnLeft()
+        turtle.place()
+        turtle.down()
+        turtle.place()
+        turtle.turnRight()
+        turtle.forward()
+    end
+end
