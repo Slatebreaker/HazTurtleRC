@@ -1,0 +1,9 @@
+function selectBlock()
+    return nil
+end
+
+function selectBlockForever()
+    while true do
+        selectBlock()
+    end
+end
