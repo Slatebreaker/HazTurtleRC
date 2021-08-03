@@ -1,0 +1,10 @@
+-- v0.1.0
+require("/lib/yoshi/tw");
+function dig1x2Bridge()
+    while true do
+        pd();
+        du();
+        df();
+        mf();
+    end
+end

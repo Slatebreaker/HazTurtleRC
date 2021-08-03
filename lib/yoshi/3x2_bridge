@@ -1,0 +1,22 @@
+-- v0.1.5
+require("/lib/yoshi/tw");
+local f = function()
+    tw.df();
+    tw.mf();
+    tw.pd();
+    tw.du();
+end
+function dig3x2Bridge()
+    while true do
+        f();
+        tw.tr();
+        f();
+        f();
+        tw.tl();
+        f();
+        tw.tl();
+        f();
+        f();
+        tw.tr();
+    end
+end

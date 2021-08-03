@@ -1,0 +1,41 @@
+-- v0.1.0
+local ensureHoldingItem = function()
+    local i = turtle.getSelectedSlot();
+    while turtle.getItemCount() == 0 do
+        i = i + 1;
+        if i == 17 then i = 1; end
+        turtle.select(i);
+    end
+end
+
+dd = turtle.digDown;
+df = function()
+    while turtle.detect() do turtle.dig(); end
+end;
+du = function()
+    while turtle.detectUp() do turtle.digUp(); end
+end;
+
+mb = turtle.back;
+md = turtle.down;
+mf = turtle.forward;
+mu = turtle.up;
+
+pd = function()
+    if turtle.detectDown() then return; end
+    ensureHoldingItem();
+    turtle.placeDown();
+end;
+pf = function()
+if turtle.detect() then return; end
+    ensureHoldingItem();
+    turtle.place();
+end;
+pu = function()
+if turtle.detectUp() then return; end
+    ensureHoldingItem();
+    turtle.placeUp();
+end;
+
+tl = turtle.turnLeft;
+tr = turtle.turnRight;
