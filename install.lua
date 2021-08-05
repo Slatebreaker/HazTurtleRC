@@ -22,11 +22,11 @@ local programs = {
 	"/lib/yoshi/3x2_bridge",
 	"/lib/yoshi/tw",
 	
-	"/ctl.lua"
-	"/dig.lua"
-	"/install.lua"
-	"/msg.lua"
-	"/speaker.lua"
+	"/ctl.lua",
+	"/dig.lua",
+	"/install.lua",
+	"/msg.lua",
+	"/speaker.lua",
 	"/turtleserver.lua"
 }
 
