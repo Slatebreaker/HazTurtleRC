@@ -27,7 +27,8 @@ local programs = {
 	"/install.lua",
 	"/msg.lua",
 	"/speaker.lua",
-	"/turtleserver.lua"
+	"/turtleserver.lua",
+	"/update.lua"
 }
 
 for _, program in pairs(programs) do
