@@ -24,7 +24,6 @@ local programs = {
 	
 	"/ctl.lua",
 	"/dig.lua",
-	"/install.lua",
 	"/msg.lua",
 	"/speaker.lua",
 	"/turtleserver.lua",
