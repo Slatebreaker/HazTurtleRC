@@ -1,22 +1,22 @@
 -- v0.1.5
 require("/lib/yoshi/tw");
 local f = function()
-    tw.df();
-    tw.mf();
-    tw.pd();
-    tw.du();
+    df();
+    mf();
+    pd();
+    du();
 end
 function dig3x2Bridge()
     while true do
         f();
-        tw.tr();
+        tr();
         f();
         f();
-        tw.tl();
+        tl();
         f();
-        tw.tl();
+        tl();
         f();
         f();
-        tw.tr();
+        tr();
     end
 end
