@@ -5,7 +5,7 @@ local programslist = {
 		"/lib/hazmat/keyInterrupt",
 
 		"startup.lua",
-		--"/speaker.lua",
+
 		"/update.lua"
 	},
 	turtle = {
@@ -16,7 +16,7 @@ local programslist = {
 		
 		"/lib/yoshi/tw",
 		"/lib/yoshi/1x2_bridge",
-		--"/lib/yoshi/1x_ceil.lua",
+
 		"/lib/yoshi/3x2_bridge",
 		
 		"/turtleserver.lua",
@@ -30,7 +30,8 @@ local programslist = {
 	},
 	
 	depreciated = {
-		
+		"/speaker.lua",
+		"/lib/yoshi/1x_ceil.lua",
 	}
 }
 
