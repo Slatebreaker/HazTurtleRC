@@ -28,7 +28,6 @@ local programslist = {
 		"/ctl.lua",
 		"/msg.lua"
 	},
-	
 	depreciated = {
 		"/speaker.lua",
 		"/lib/yoshi/1x_ceil.lua",
