@@ -43,6 +43,7 @@ local allprograms = {
 	}
 		
 }
+
 for programtype, programs in pairs(allprograms)
 	for _, program in pairs(programs)
 		if programtype == "common" then
@@ -56,3 +57,5 @@ for programtype, programs in pairs(allprograms)
 		end
 	end
 end
+
+os.reboot()
