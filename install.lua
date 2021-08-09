@@ -22,6 +22,7 @@ local programs = {
 	"/lib/yoshi/3x2_bridge",
 	"/lib/yoshi/tw",
 	
+	"startup.lua",
 	"/ctl.lua",
 	"/dig.lua",
 	"/msg.lua",
