@@ -44,7 +44,7 @@ local allprograms = {
 		
 }
 for programtype, programs in pairs(allprograms)
-	for _, program in pairs(programs) do
+	for _, program in pairs(programs)
 		if programtype == "common" then
 			update(program)
 		elseif programtype == "pocket" and pocket then
