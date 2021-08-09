@@ -1,15 +1,6 @@
 local url="https://raw.githubusercontent.com/HazmatDrone/cc-turtlecode/master/"
 
-function uninstall(file)
-	fs.delete(file);
-end
-
-function update(file)
-	uninstall(file)
-	shell.execute("wget", url .. file, file);
-end
-
-local allprograms = {
+local programslist = {
 	common = {
 		"/lib/hazmat/keyInterrupt",
 
@@ -41,10 +32,18 @@ local allprograms = {
 	depreciated = {
 		
 	}
-		
 }
 
-for programtype, programs in pairs(allprograms)
+function uninstall(file)
+	fs.delete(file);
+end
+
+function update(file)
+	uninstall(file)
+	shell.execute("wget", url .. file, file);
+end
+
+for programtype, programs in pairs(programslist)
 	for _, program in pairs(programs)
 		if programtype == "common" then
 			update(program)
