@@ -43,8 +43,8 @@ function update(file)
 	shell.execute("wget", url .. file, file);
 end
 
-for programtype, programs in pairs(programslist)
-	for _, program in pairs(programs)
+for programtype, programs in pairs(programslist) do
+	for _, program in pairs(programs) do
 		if programtype == "common" then
 			update(program)
 		elseif programtype == "pocket" and pocket then
