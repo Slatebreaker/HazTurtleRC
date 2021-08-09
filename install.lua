@@ -9,37 +9,50 @@ function update(file)
 	shell.execute("wget", url .. file, file);
 end
 
-local programs = {
-	"/lib/hazmat/digbasic",
-	"/lib/hazmat/keyInterrupt",
-	"/lib/hazmat/keys",
-	"/lib/hazmat/remotestop",
-	"/lib/hazmat/selectblock",
-	"/lib/hazmat/turtle_remote",
+local allprograms = {
+	common = {
+		"/lib/hazmat/keyInterrupt",
 
-	"/lib/yoshi/1x2_bridge",
-	"/lib/yoshi/1x_ceil.lua",
-	"/lib/yoshi/3x2_bridge",
-	"/lib/yoshi/tw",
+		"startup.lua",
+		--"/speaker.lua",
+		"/update.lua"
+	},
+	turtle = {
+		"/lib/hazmat/digbasic",
+		"/lib/hazmat/turtle_remote",
+		"/lib/hazmat/remotestop",
+		"/lib/hazmat/selectblock",
+		
+		"/lib/yoshi/tw",
+		"/lib/yoshi/1x2_bridge",
+		--"/lib/yoshi/1x_ceil.lua",
+		"/lib/yoshi/3x2_bridge",
+		
+		"/turtleserver.lua",
+		"/dig.lua"
+	},
+	pocket = {
+		"/lib/hazmat/keys",
+		
+		"/ctl.lua",
+		"/msg.lua"
+	},
 	
-	"startup.lua": "common",
-	"/ctl.lua",
-	"/dig.lua",
-	"/msg.lua",
-	"/speaker.lua",
-	"/turtleserver.lua",
-	"/update.lua"
+	depreciated = {
+		
+	}
+		
 }
-
-for program, programtype in pairs(programs) do
-	if programtype == "common" then
-		update(program)
-	elseif programtype == "pocket" and pocket then
-		update(program)
-	elseif programtype == "turtle" and turtle then
-		update(program)
-	else
-		uninstall(program)
+for programtype, programs in pairs(allprograms)
+	for _, program in pairs(programs) do
+		if programtype == "common" then
+			update(program)
+		elseif programtype == "pocket" and pocket then
+			update(program)
+		elseif programtype == "turtle" and turtle then
+			update(program)
+		else
+			uninstall(program)
+		end
 	end
-	
 end
