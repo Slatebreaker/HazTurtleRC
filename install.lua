@@ -22,7 +22,7 @@ local programs = {
 	"/lib/yoshi/3x2_bridge",
 	"/lib/yoshi/tw",
 	
-	"startup.lua",
+	"startup.lua": "common",
 	"/ctl.lua",
 	"/dig.lua",
 	"/msg.lua",
@@ -31,6 +31,15 @@ local programs = {
 	"/update.lua"
 }
 
-for _, program in pairs(programs) do
-	update(program)
+for program, programtype in pairs(programs) do
+	if programtype == "common" then
+		update(program)
+	elseif programtype == "pocket" and pocket then
+		update(program)
+	elseif programtype == "turtle" and turtle then
+		update(program)
+	else
+		uninstall(program)
+	end
+	
 end
