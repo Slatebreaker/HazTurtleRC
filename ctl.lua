@@ -1,6 +1,6 @@
 require("lib/hazmat/keys")
 rednet.open("back")
-local file = open(.lastctl, "w")
+local file = open(".lastctl", "w")
 local lastctl = file.write(...)
 file.close()
 while true do
