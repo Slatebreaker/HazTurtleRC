@@ -15,6 +15,7 @@ function get_files(url)
 			file.close()
 		end
 	end
+end
 
 -- 
 get_files("https://api.github.com/repos/" .. url .. "/contents")
