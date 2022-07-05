@@ -1,6 +1,7 @@
+-- Repo to install from
 local repo="HazmatDrone/cc-turtlecode"
 
--- Recursively obtains all files from a GitHub URL
+-- Recursively obtains all files and folders from a GitHub API URL
 local function get_files(url)
 	if folder == null then folder = "" end
 	for _,v in pairs(unserialiseJSON(http.get(url))) do
@@ -17,6 +18,6 @@ local function get_files(url)
 	end
 end
 
--- 
+-- Gets files from the GitHub API based on repo at top of file
 get_files("https://api.github.com/repos/" .. url .. "/contents")
 os.reboot()
