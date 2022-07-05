@@ -10,7 +10,7 @@ local function get_files(url)
 			end
 			get_files(v.url, v.path)
 		else
-			file = fs.open(v.path, "w")
+			local file = fs.open(v.path, "w")
 			file.write(http.get(v.download_url))
 			file.close()
 		end
