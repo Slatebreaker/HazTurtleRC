@@ -1,7 +1,7 @@
 local repo="HazmatDrone/cc-turtlecode"
 
 -- Recursively obtains all files from a GitHub URL
-function get_files(url)
+local function get_files(url)
 	if folder == null then folder = "" end
 	for _,v in pairs(unserialiseJSON(http.get(url))) do
 		if v.type == "dir" then
