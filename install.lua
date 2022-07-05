@@ -12,7 +12,7 @@ local function get_files(url)
 			get_files(data.url, data.path)
 		else
 			local file = fs.open(data.path, "w")
-			file.write(http.get(data.download_url))
+			file.write(http.get(data.download_url).readAll())
 			file.close()
 		end
 	end
