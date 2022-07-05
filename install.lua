@@ -5,12 +5,12 @@ local function get_files(url)
 	if folder == null then folder = "" end
 	for _,v in pairs(unserialiseJSON(http.get(url))) do
 		if v.type == "dir" then
-			if not fs.isDir("/"..v.path) then
-				fs.makeDir("/"..v.path)
+			if not fs.isDir(v.path) then
+				fs.makeDir(v.path)
 			end
-			get_files(v.url, "/"..v.path)
+			get_files(v.url, v.path)
 		else
-			file = fs.open("/"..v.path, "w")
+			file = fs.open(v.path, "w")
 			file.write(http.get(v.download_url))
 			file.close()
 		end
