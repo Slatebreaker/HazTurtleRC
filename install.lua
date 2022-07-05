@@ -4,15 +4,16 @@ local repo="HazmatDrone/cc-turtlecode"
 -- Recursively obtains all files and folders from a GitHub API URL
 local function get_files(url)
 	if folder == null then folder = "" end
-	for _,v in ipairs(http.get(url)) do
-		if v.type == "dir" then
-			if not fs.isDir(v.path) then
-				fs.makeDir(v.path)
+	for _,v in pairs(http.get(url)) do
+		local data = v()
+		if data.type == "dir" then
+			if not fs.isDir(data.path) then
+				fs.makeDir(data.path)
 			end
-			get_files(v.url, v.path)
+			get_files(data.url, data.path)
 		else
-			local file = fs.open(v.path, "w")
-			file.write(http.get(v.download_url))
+			local file = fs.open(data.path, "w")
+			file.write(http.get(data.download_url))
 			file.close()
 		end
 	end
