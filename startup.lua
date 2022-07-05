@@ -1,5 +1,5 @@
 if turtle
-and peripherals.isPresent("modem_0")
+and peripheral.find("modem")
 then
   shell.openTab("turtleserver.lua")
   shell.switchTab(2)
