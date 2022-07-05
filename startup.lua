@@ -6,7 +6,7 @@ then
 elseif pocket
 and peripheral.find("modem")
 then
-  local file = open(".lastctl", "r")
+  local file = fs.open(".lastctl", "r")
   local lastctl = file.read()
   file.close()
   shell.openTab("ctl "..lastctl)
