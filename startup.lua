@@ -12,6 +12,8 @@ then
     lastctl = file.readAll()
     file.close()
   end
-  shell.openTab("ctl "..lastctl)
-  shell.switchTab(2)
+  if lastctl then
+    shell.openTab("ctl "..lastctl)
+    shell.switchTab(2)
+  end
 end
