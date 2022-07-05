@@ -1,60 +1,21 @@
-local url="https://raw.githubusercontent.com/HazmatDrone/cc-turtlecode/master/"
+local repo="HazmatDrone/cc-turtlecode"
 
-local programslist = {
-	common = {
-		"/lib/hazmat/keyInterrupt",
-
-		"startup.lua",
-
-		"/update.lua"
-	},
-	turtle = {
-		"/lib/hazmat/digbasic",
-		"/lib/hazmat/turtle_remote",
-		"/lib/hazmat/remotestop",
-		"/lib/hazmat/selectblock",
-		
-		"/lib/yoshi/tw",
-		"/lib/yoshi/1x2_bridge",
-
-		"/lib/yoshi/3x2_bridge",
-		
-		"/turtleserver.lua",
-		"/dig.lua"
-	},
-	pocket = {
-		"/lib/hazmat/keys",
-		
-		"/ctl.lua",
-		"/msg.lua"
-	},
-	depreciated = {
-		"/speaker.lua",
-		"/lib/yoshi/1x_ceil.lua",
-	}
-}
-
-function uninstall(file)
-	fs.delete(file);
-end
-
-function update(file)
-	uninstall(file)
-	shell.execute("wget", url .. file, file);
-end
-
-for programtype, programs in pairs(programslist) do
-	for _, program in pairs(programs) do
-		if programtype == "common" then
-			update(program)
-		elseif programtype == "pocket" and pocket then
-			update(program)
-		elseif programtype == "turtle" and turtle then
-			update(program)
+-- Recursively obtains all files from a GitHub URL
+function get_files(url)
+	if folder == null then folder = "" end
+	for _,v in unserialiseJSON(http.get(url))
+		if v.type == "dir" then
+			if not fs.isDir("/"..v.path) then
+				fs.makeDir("/"..v.path)
+			end
+			get_files(v.url, "/"..v.path)
 		else
-			uninstall(program)
+			file = fs.open("/"..v.path, "w")
+			file.write(http.get(v.download_url))
+			file.close()
 		end
 	end
-end
 
+-- 
+get_files("https://api.github.com/repos/" .. url .. "/contents")
 os.reboot()
