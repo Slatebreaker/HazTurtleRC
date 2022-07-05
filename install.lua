@@ -9,9 +9,11 @@ local function get_files(url)
 			if not fs.isDir(data.path) then
 				fs.makeDir(data.path)
 			end
+			print("Updating directory ".. data.path)
 			get_files(data.url, data.path)
 		else
 			local file = fs.open(data.path, "w")
+			print("Updating file ".. data.path)
 			file.write(http.get(data.download_url).readAll())
 			file.close()
 		end
