@@ -3,6 +3,7 @@ function keyctl(server)
 local tab = false
 local _, key = os.pullEvent("key")
 
+io.write(server .. "> ")
 if key == keys.tab then
     cmd = read(); tab = true;
 elseif key == keys.enter then
@@ -39,7 +40,7 @@ if cmd ~= nil then
         print(cmd)
     end
     rednet.broadcast(cmd, server)
-    io.write(server .. "> ")
+    
 end
 
 end
