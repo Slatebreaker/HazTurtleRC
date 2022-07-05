@@ -19,5 +19,5 @@ local function get_files(url)
 end
 
 -- Gets files from the GitHub API based on repo at top of file
-get_files("https://api.github.com/repos/" .. url .. "/contents")
+get_files("https://api.github.com/repos/" .. repo .. "/contents")
 os.reboot()
