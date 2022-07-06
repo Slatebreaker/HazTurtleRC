@@ -1,5 +1,3 @@
-require("lib/hazmat/keys")
-
 local function startserver(server)
     if not server then
         print("Error: please specify a turtle name.")
