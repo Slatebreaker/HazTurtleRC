@@ -1,3 +1,6 @@
+-- Include /bin for storing programs
+shell.setPath(shell.path()..":/bin")
+
 if turtle
 and peripheral.find("modem")
 then
