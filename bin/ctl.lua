@@ -1,19 +1,3 @@
-local function startserver(server)
-    if not server then
-        print("Error: please specify a turtle name.")
-        return
-    end
-    rednet.open("back")
-    local file = fs.open(".lastctl", "w")
-    local lastctl = file.write(server)
-    file.close()
-    while true do
-        io.write(server .. "> ")
-        print(keyctl(server))
-        sleep(0.2)
-    end
-end
-
 local function keyctl(server)
 
     local tab = false
@@ -55,6 +39,22 @@ local function keyctl(server)
         if tab == false then
             return cmd
         end
+    end
+end
+
+local function startserver(server)
+    if not server then
+        print("Error: please specify a turtle name.")
+        return
+    end
+    rednet.open("back")
+    local file = fs.open(".lastctl", "w")
+    local lastctl = file.write(server)
+    file.close()
+    while true do
+        io.write(server .. "> ")
+        print(keyctl(server))
+        sleep(0.2)
     end
 end
 
