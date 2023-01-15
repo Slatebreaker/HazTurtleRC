@@ -5,6 +5,9 @@
 1. Run `wget run https://raw.githubusercontent.com/HazmatDrone/cc-turtlecode/master/install.lua` on your turtle and your phone.
 2. Name your turtle something with no spaces
 
+## Fuelling
+Open the leftmost terminal on your turtle and type `refuel x` with fuel in hand, replacing `x` with the amount of fuel
+
 ## Direct control (with associated commands)
 - `W`, `A`, `S`, `D` to move forwards, backwards, and turn. (commands: `mf` `mb` `tl` `tr`)
 - `Space` and `Shift` to move up and down. (commands: `mu` `md`)
