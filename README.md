@@ -7,7 +7,7 @@
 
 
 ## Fuelling
-Open the leftmost terminal on your turtle and type `refuel x` with fuel in hand, replacing `x` with the amount of fuel
+Open the leftmost terminal on your turtle and type `refuel x` with fuel in the turtle's selected slot, replacing `x` with the amount of fuel
 
 ## Direct control (with associated commands)
 - `W`, `A`, `S`, `D` to move forwards, backwards, and turn. (commands: `mf` `mb` `tl` `tr`)
