@@ -3,7 +3,7 @@
 ## Quick install
 
 1. Run `wget run https://raw.githubusercontent.com/HazmatDrone/cc-turtlecode/master/install.lua` on your turtle and your phone.
-2. Name your turtle something with no spaces
+2. Name your turtle something with no spaces using `label set <name>`
 
 ## Fuelling
 Open the leftmost terminal on your turtle and type `refuel x` with fuel in hand, replacing `x` with the amount of fuel
