@@ -1,4 +1,4 @@
-# cc-turtlecode
+# HazTurtleRC
 
 Remote-controlled turtle using a pocket computer for the ComputerCraft mod in Minecraft.
 
