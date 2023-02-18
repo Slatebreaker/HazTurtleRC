@@ -2,8 +2,8 @@
 
 ## Quick install
 
-1. Name your turtle something with no spaces using `label set <name>`
-2. Run `wget run https://raw.githubusercontent.com/HazmatDrone/cc-turtlecode/master/install.lua` on your turtle and your phone.
+1. **Name your turtle** something with no spaces using `label set <name>`
+2. Run `wget run https://raw.githubusercontent.com/HazmatDrone/cc-turtlecode/master/install.lua` on your **turtle and your phone**.
 3. Reboot both devices.
 4. On your phone, type `ctl <turtle>` replacing `<turtle>` with the label you set in **Step 1**. (This setting will be remembered)
 
