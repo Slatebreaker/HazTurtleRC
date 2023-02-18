@@ -1,5 +1,18 @@
 # cc-turtlecode
 
+Remote-controlled turtle using a pocket computer. Can be moved around with WASD-style controls as well as given some basic automatic tasks.
+
+## Components
+
+### Critical
+- A turtle with a wireless modem
+- A pocket computer with a wireless modem
+
+### Optional
+- Advanced turtle and pocket computer
+- Ender modems instead of wireless modems for infinite range
+- A pickaxe or similar tool attached to the turtle for digging
+
 ## Quick install
 
 1. **Name your turtle** something with no spaces using `label set <name>`, replacing `<name>` with the desired name.
