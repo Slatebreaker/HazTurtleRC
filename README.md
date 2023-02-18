@@ -24,7 +24,7 @@ Remote-controlled turtle using a pocket computer. Can be moved around with WASD-
 Open the leftmost terminal on your turtle and type `refuel x` with fuel in the turtle's selected slot, replacing `x` with the amount of fuel
 
 ## Direct control (with associated commands)
-- `W`, `A`, `S`, `D` to move forwards, backwards, and turn. (commands: `mf` `mb` `tl` `tr`)
+- `W` `A` `S` `D` to move forwards, backwards, and turn. (commands: `mf` `mb` `tl` `tr`)
 - `Space` and `Shift` to move up and down. (commands: `mu` `md`)
 - `R`, `F` and `V` to dig up, forwards, and down respectively. (commands: `du` `df` `dd`)
 - `T`, `G` and `C` to use/place up, forwards, and down respectively. (commands: `pu` `pf` `pd`)
