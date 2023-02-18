@@ -18,7 +18,7 @@ Can be moved around with WASD-style controls as well as given some basic automat
 ## Quick install
 
 1. **Name your turtle** something with no spaces using `label set <name>`, replacing `<name>` with the desired name.
-2. Run `wget run https://raw.githubusercontent.com/HazmatDrone/cc-turtlecode/master/install.lua` on your **turtle and your phone**.
+2. Run `wget run https://raw.githubusercontent.com/HazmatDrone/cc-turtlecode/master/update.lua` on your **turtle and your phone**.
 3. Reboot both devices.
 4. On your phone, type `ctl <turtle>` replacing `<turtle>` with the label you set in **Step 1**. (This setting will be remembered)
 
