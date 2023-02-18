@@ -21,4 +21,4 @@ Open the leftmost terminal on your turtle and type `refuel x` with fuel in hand,
 - All the commands specified above
 - `dig` will dig a 1x2 tunnel until told to stop, using blocks to build bridges if necessary.
 - `dig3x2` will dig a 3x2 tunnel until told to stop, using blocks to build if necessary. Due to having to rotate a lot, is substantially slower.
-- `stop` will stop any currently running task.
+- `stop` will stop any currently running task. (Note that any new command sent will also just overwrite the previously running command)
