@@ -1,5 +1,5 @@
 -- Repo to install from
-local repo="HazmatDrone/HazTurtleRC"
+local repo="FERR1TE/HazTurtleRC"
 
 -- Recursively obtains all files and folders from a GitHub API URL
 local function get_files(url)
