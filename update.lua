@@ -1,5 +1,5 @@
 -- Repo to install from
-local repo="FERR1TE/HazTurtleRC"
+local repo="Slatebreaker/HazTurtleRC"
 
 -- Recursively obtains all files and folders from a GitHub API URL
 local function get_files(url)
